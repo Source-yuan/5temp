@@ -1,0 +1,33 @@
+话题：rostopic type /state_ukf/odom
+nav_msgs/Odometry
+
+
+话题：rostopic type /map_generator/global_cloud 
+sensor_msgs/PointCloud2
+话题：rostopic type /pcl_render_node/local_map 
+sensor_msgs/PointCloud2
+话题：rostopic type /pcl_render_node/cloud 
+sensor_msgs/PointCloud2
+话题：rostopic type /waypoint_generator/waypoints
+nav_msgs/Path
+
+//fast_planner_node发布->traj_server
+话题：rtopic type /planning/replan 
+std_msgs/Empty
+话题：rostopic type /planning/bspline 
+plan_manage/Bspline
+话题：rostopic type /planning/new 
+std_msgs/Empty
+
+话题：rostopic type /planning_vis/trajectory
+visualization_msgs/Marker
+
+话题：rostopic type /sdf_map/occupancy_inflate 
+sensor_msgs/PointCloud2
+
+//traj_server 发布//
+话题：rostopic type /planning/pos_cmd 
+quadrotor_msgs/PositionCommand
+话题：rostopic type /planning/position_cmd_vis
+visualization_msgs/Marker
+
